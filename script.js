@@ -110,15 +110,6 @@ tabs.forEach((tab, index) => {
   });
 });
 
-document.querySelectorAll('.pillar-list details').forEach((detail) => {
-  detail.addEventListener('toggle', () => {
-    if (!detail.open) return;
-    document.querySelectorAll('.pillar-list details').forEach((other) => {
-      if (other !== detail) other.open = false;
-    });
-  });
-});
-
 document.querySelectorAll('.scenario-switch button').forEach((button) => {
   button.addEventListener('click', () => {
     const volume = Number(button.dataset.volume);
