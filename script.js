@@ -1,3 +1,45 @@
+const accessKey = 'jc123';
+const storageKey = 'multiplix-jc-access';
+const loginForm = document.getElementById('login-form');
+const passwordInput = document.getElementById('password');
+const loginError = document.getElementById('login-error');
+
+function unlockPage() {
+  document.documentElement.classList.remove('locked');
+  document.documentElement.classList.add('unlocked');
+  loginError.textContent = '';
+  passwordInput.value = '';
+}
+
+function lockPage() {
+  document.documentElement.classList.remove('unlocked');
+  document.documentElement.classList.add('locked');
+  window.scrollTo(0, 0);
+  passwordInput.focus();
+}
+
+try {
+  if (sessionStorage.getItem(storageKey) === 'yes') unlockPage();
+} catch (_) {
+  // O acesso pela senha continua disponível se o navegador bloquear o armazenamento.
+}
+
+loginForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  if (passwordInput.value.trim().toLowerCase() === accessKey) {
+    try { sessionStorage.setItem(storageKey, 'yes'); } catch (_) {}
+    unlockPage();
+  } else {
+    loginError.textContent = 'Senha incorreta. Confira e tente novamente.';
+    passwordInput.select();
+  }
+});
+
+document.getElementById('logout').addEventListener('click', () => {
+  try { sessionStorage.removeItem(storageKey); } catch (_) {}
+  lockPage();
+});
+
 const stages = [
   {
     kicker: 'ETAPA 01 / ORIGEM',

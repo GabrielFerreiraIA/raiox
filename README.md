@@ -13,3 +13,5 @@ Página estática da Multiplix baseada na transcrição da reunião de diagnóst
 ## Publicação
 
 O projeto não exige instalação ou build. `index.html` é a página inicial e pode ser importada diretamente como site estático na Vercel.
+
+O acesso usa uma senha simples no navegador e fica ativo até a aba ser fechada. Como a senha consta no código público, esta tela é uma conveniência de apresentação e não protege informação sigilosa.

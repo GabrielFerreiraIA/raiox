@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="locked">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +14,24 @@
   <script src="script.js" defer></script>
 </head>
 <body>
+  <section class="login-screen" id="login" aria-labelledby="login-title">
+    <div class="login-panel">
+      <span class="wordmark login-wordmark">MULTIPLI<span>X</span></span>
+      <div class="login-content">
+        <div class="eyebrow light"><span class="eyebrow-line"></span> ACESSO AO RAIO-X · JC</div>
+        <h1 id="login-title">Sua análise comercial está pronta.</h1>
+        <p>João e José, este é o mapa dos pontos discutidos no diagnóstico e das perguntas que orientam a próxima conversa.</p>
+        <form id="login-form" novalidate>
+          <label for="password">Senha de acesso</label>
+          <div class="login-fields"><input id="password" name="password" type="password" autocomplete="current-password" required placeholder="Digite a senha"><button type="submit">Acessar <span aria-hidden="true">→</span></button></div>
+          <p class="login-error" id="login-error" role="alert" aria-live="polite"></p>
+        </form>
+      </div>
+      <span class="login-foot">MULTIPLIX <span>×</span> JC</span>
+    </div>
+    <div class="login-visual" aria-hidden="true"><div class="login-ring ring-one"></div><div class="login-ring ring-two"></div><div class="login-ring ring-three"></div><span class="login-jc">JC</span><span class="login-visual-note">ENGENHARIA<br>COMERCIAL<br>EM FOCO</span></div>
+  </section>
+  <noscript><p class="noscript-message">Ative o JavaScript para acessar este Raio-X.</p></noscript>
   <a class="skip" href="#conteudo">Ir para o conteúdo</a>
   <header class="topbar">
     <a class="wordmark" href="#inicio" aria-label="Multiplix, voltar ao início">MULTIPLI<span>X</span></a>
@@ -24,6 +42,7 @@
       <a href="#pilares">Leitura</a>
       <a href="#proximos">Próximos passos</a>
     </nav>
+    <button class="logout" id="logout" type="button">Sair</button>
   </header>
 
   <main id="conteudo">
