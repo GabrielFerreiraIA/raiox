@@ -2,6 +2,11 @@
 
 Página estática da Multiplix baseada na transcrição da reunião de diagnóstico com João Lobato e José Carlos Silva Junior.
 
+## Identidade visual
+
+- `assets/multiplix-symbol.jpg` e `assets/multiplix-wordmark.jpg` são os arquivos originais fornecidos pela Multiplix, copiados da pasta de identidade visual do usuário.
+- A sigla **JC** identifica o cliente neste diagnóstico; não foi criada nem utilizada como marca ou logotipo.
+
 ## Nome e limites dos dados
 
 - João se refere à empresa como **JC** e a descreve como empresa de engenharia. A transcrição não informa uma razão social ou nome de marca mais longo.
